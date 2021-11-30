@@ -1,13 +1,13 @@
 package hello.advanced.app.v2
 
-import hello.advanced.trace.helloTrace.HelloTraceV1
+import hello.advanced.trace.helloTrace.HelloTraceV2
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class OrderControllerV2(
     private val orderService: OrderServiceV2,
-    private val trace: HelloTraceV1
+    private val trace: HelloTraceV2
 ) {
 
     @GetMapping("/v2/request")
