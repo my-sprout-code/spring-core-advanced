@@ -5,8 +5,8 @@ import hello.advanced.trace.TraceStatus
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
-class FieldLogTrace(private var traceIdHolder: TraceId? = null) : LogTrace {
-
+class FieldLogTrace : LogTrace {
+    private var traceIdHolder: TraceId? = null
     private val log: Logger = LoggerFactory.getLogger(javaClass)
 
     override fun begin(message: String): TraceStatus {
